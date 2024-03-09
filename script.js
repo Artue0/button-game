@@ -1,5 +1,7 @@
+let value = 150;
 function createBalls() {
-    for (let i = 0; i < 150; i++) {
+    if (window.innerWidth < 768){value = 30;}
+    for (let i = 0; i < value; i++) {
         var ball = document.createElement("div");
         ball.classList.add("ball");
 
@@ -22,8 +24,6 @@ function moveBalls() {
     var balls = document.getElementsByClassName("ball");
     for (var i = 0; i < balls.length; i++) {
         var ball = balls[i];
-        var xPos = parseInt(ball.style.left);
-        var yPos = parseInt(ball.style.top);
 
         var deltaX = Math.random() * 200 - 100;
         var deltaY = Math.random() * 200 - 100;

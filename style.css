@@ -92,6 +92,7 @@ h1, #reset, #record, p {
     position: absolute;
     left: 50vw;
     transform: translate(-50%,-50%);
+    white-space: nowrap;
 }
 
 h1 {font-size: 10vh;}
@@ -115,4 +116,11 @@ p {
     left: 50vw;
     transform: translate(-50%,-50%);
     font-size: 5vh;
+}
+
+@media screen and (max-width: 768px) {
+    h1, #reset {
+        white-space: pre;
+        font-size: 7vh;
+    }
 }
