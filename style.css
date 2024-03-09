@@ -1,0 +1,118 @@
+body {
+    background-color: #0c58da;
+    overflow: hidden;
+}
+.ball {
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+}
+#button-top {
+    z-index: 5;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+    width: 25vh;
+    height: 15vh;
+    background-color: #0077ff;
+    border-radius: 50%;
+}
+#points{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    font-size: 10vh;
+    font-family: "Staatliches", sans-serif;
+    color: #4cc9f0;
+    perspective: 100px;
+    transform: rotateX(55deg);
+}
+#box {
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translateX(-50%);
+    width: 24.9vh;
+    height: 5vh;
+    background-color: #1f43e0;
+}
+#button-bottom {
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 25vh;
+    height: 15vh;
+    background-color: #1f43e0;
+    border-radius: 50%;
+}
+#button-outline {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 25vh;
+    height: 15vh;
+    border: #4cc9f0 2vh solid;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.click {animation: clicked 0.5s;}
+
+@keyframes clicked {
+    0%{top: 45%;}
+    50%{top: 50%;}
+    100%{top: 45%;}
+}
+
+.shrink {
+    animation: shrink 0.5s forwards;
+    transform-origin: bottom;
+}
+
+@keyframes shrink {
+    0% { transform: scaleY(1) translateX(-50%); }
+    50% { transform: scaleY(0) translateX(-50%); }
+    100% { transform: scaleY(1) translateX(-50%); }
+}
+
+h1, #reset, #record, p {
+    user-select: none;
+    font-family: "Staatliches", sans-serif;
+    color: #4cc9f0;
+    letter-spacing: 5px;
+    position: absolute;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+}
+
+h1 {font-size: 10vh;}
+
+#reset{
+    font-size: 10vh;
+    top: 85vh;
+}
+
+p {
+    position: absolute;
+    top: 88vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    font-size: 5vh;
+}
+
+#record {
+    position: absolute;
+    top: 15vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    font-size: 5vh;
+}
