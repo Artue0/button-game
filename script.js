@@ -57,10 +57,6 @@ function button() {
     var record = document.getElementById("record")
     var clickAudio = document.getElementById("clickSound");
     var boomAudio = document.getElementById("boomSound");
-    const video = document.createElement('video');
-    video.src = 'boom.gif';
-    document.body.appendChild(video);
-    video.style.zIndex = 10;
     if (state === 0) {
         clickAudio.play();
         state = 1;
